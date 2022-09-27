@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('title')
-Guru
+Siswa
 @endsection
 
 @section('content')
@@ -9,12 +9,12 @@ Guru
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Data Guru</h1>
+                <h1>Data Siswa</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Guru</li>
+                    <li class="breadcrumb-item active">Siswa</li>
                 </ol>
             </div>
         </div>
@@ -25,7 +25,7 @@ Guru
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Data Guru</h3>
+            <h3 class="card-title">Data Siswa</h3>
             <div class="card-tools">
                 <button type="button" onclick="addForm('{{route('guru.store')}}')" class="btn btn-tool">
                     <i class="fas fa-plus"></i>
@@ -38,14 +38,16 @@ Guru
                 <thead>
                     <th>No.</th>
                     <th>Nama</th>
+                    <th>Alamat</th>
                     <th>Jenis Kelamin</th>
                     <th>Mapel</th>
                     <th>Aksi</th>
                 </thead>
-                @foreach ($guru as $item)
+                @foreach ($siswa as $item)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{$item->nama}}</td>
+                    <td>{{$item->alamat}}</td>
                     <td>{{$item->jenis_kelamin}}</td>
                     <td>{{$item->mapel_id}}</td>
                     <td>
@@ -62,18 +64,18 @@ Guru
     </div>
 
 </section>
-@includeIf('guru.form')
+@includeIf('siswa.form')
 @endsection
 
 @push('script')
     <script>
         function addForm(url){
             $('#modalForm').modal('show');
-            $('#modalForm .modal-title').text('Tambah Data Guru');            
+            $('#modalForm .modal-title').text('Tambah Data Siswa');            
         }
         function editData(){
             $('#modalForm').modal('show');
-            $('#modalForm .modal-title').text('Edit Data Guru');
+            $('#modalForm .modal-title').text('Edit Data Siswa');
             }
     </script>
 @endpush

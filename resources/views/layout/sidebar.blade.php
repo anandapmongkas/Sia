@@ -42,6 +42,7 @@
                 </a>
             </li>
 
+            <li class="nav-header">MASTER</li>
             <li class="nav-item">
                     <a href="#" class="nav-link">
                     <i class="fas fa-graduation-cap"></i>
