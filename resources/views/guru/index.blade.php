@@ -27,12 +27,12 @@ Guru
         <div class="card-header">
             <h3 class="card-title">Data Guru</h3>
             <div class="card-tools">
+                </button>
                 <button type="button" onclick="addForm('{{route('guru.store')}}')" class="btn btn-tool">
                     <i class="fas fa-plus"></i>
                 </button>
             </div>
         </div>
-
         <div class="card-body">
             <table class="table table-hover text-nowrap">
                 <thead>
@@ -49,7 +49,8 @@ Guru
                     <td>{{$item->jenis_kelamin}}</td>
                     <td>{{$item->mapel_id}}</td>
                     <td>
-                        <button onclick="editData()" class="btn btn-flat btn-xs btn-warning"><i class="fa fa-edit"></i></button>
+                        <button onclick="editData()" class="btn btn-flat btn-xs btn-warning"><i
+                                class="fa fa-edit"></i></button>
                         <a href="#" class="btn btn-flat btn-xs btn-danger"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
@@ -63,17 +64,18 @@ Guru
 
 </section>
 @includeIf('guru.form')
+
 @endsection
 
 @push('script')
-    <script>
-        function addForm(url){
-            $('#modalForm').modal('show');
-            $('#modalForm .modal-title').text('Tambah Data Guru');            
-        }
-        function editData(){
-            $('#modalForm').modal('show');
-            $('#modalForm .modal-title').text('Edit Data Guru');
-            }
-    </script>
+<script>
+    function addForm(url) {
+        $('#modalForm').modal('show');
+        $('#modalForm .modal-title').text('Tambah Data Guru');
+    }
+    function editData() {
+        $('#modalForm').modal('show');
+        $('#modalForm .modal-title').text('Edit Data Guru');
+    }
+</script>
 @endpush
