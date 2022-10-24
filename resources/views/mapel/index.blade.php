@@ -29,7 +29,9 @@ mapel
             <div class="card-tools">
                 </button>
                 <button type="button" onclick="addForm('{{route('mapel.store')}}')" class="btn btn-tool">
+                <div class="btn btn-sm btn-primary shadow-sm rounded-pill" style="width: 95px;">
                     <i class="fas fa-plus"></i>
+                </div>
                 </button>
             </div>
         </div>
@@ -60,6 +62,7 @@ mapel
 @includeIf('mapel.form')
 
 @endsection
+
 
 @push('script')
 <script>
@@ -107,14 +110,14 @@ mapel
     })
     function addForm(url) {
         $('#modalForm').modal('show');
-        $('#modalForm .modal-title').text('Tambah Data Mapel');
-        $('#modalForm form')[0].reset();
+        $('#modalForm .modal-title').text('Tambah Data Kelas');
+        // $('#modalForm form')[0].reset();
         $('#modalForm form').attr('action', url);
         $('#modalForm [name=_method]').val('post');
     }
     function editData(url) {
         $('#modalForm').modal('show');
-        $('#modalForm .modal-title').text('Edit Data Mapel');
+        $('#modalForm .modal-title').text('Edit Data Kelas');
         $('#modalForm form')[0].reset();
         $('#modalForm form').attr('action', url);
         $('#modalForm [name=_method]').val('put');

@@ -19,7 +19,7 @@
                         <input type="text" class="form-control" name="nama" id="nama">
                     </div>
 
-                    <button type="submit" class="btn btn-success btn-flat btn-sm">Simpan</button>
+                    <button type="submit" class="btn btn-success btn-flat btn-sm">Save</button>
                 </form>
 
             </div>
@@ -28,4 +28,4 @@
 
     </div>
 
-</div>
+</div

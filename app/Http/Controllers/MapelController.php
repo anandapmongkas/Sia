@@ -20,7 +20,7 @@ class MapelController extends Controller
     }
 
     public function data(){
-        $mapel = Mapel::orderBy('id', 'desc')->get();
+        $mapel = Mapel::orderBy('id', 'asc')->get();
 
         return datatables()
             ->of($mapel)
@@ -65,14 +65,14 @@ class MapelController extends Controller
             return response()->json($validator->errors(), 422);
         }
 
-        $mapel = Mapel::create([
+        $kelas = Kelas::create([
             'nama' => $request->nama
         ]);
 
         return response()->json([
             'success' => true,
             'message' => 'Data Berhasil Disimpan',
-            'data' => $mapel
+            'data' => $kelas
         ]);
     }
 

@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::create('guru', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->enum('jenis_kelamin', ['Laki-laki','Perempuan']);            
-            $table->integer('mapel_id') -> nullable();            
+            $table->string('alamat');
+            $table->enum('jenis_kelamin', ['Laki-Laki', 'Perempuan']);
+            $table->integer('mapel_id')->nullable();
             $table->timestamps();
         });
     }
